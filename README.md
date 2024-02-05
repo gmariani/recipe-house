@@ -1,6 +1,6 @@
 # Recipe House
 
-A precursor to my Aroma app I made much later. This was built originally for my wife to store recipes.
+A precursor to my [Aroma app](https://github.com/gmariani/aroma-air) I made much later. This was built originally for my wife to store recipes.
 
 ## Screenshots
 
