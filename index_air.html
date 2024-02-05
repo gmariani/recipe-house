@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" version="-//W3C//DTD XHTML 1.1//EN" xml:lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="Gabriel Mariani, Course Vector" />
+	<meta name="copyright" content="copyright 2007 www.coursevector.com" />
+	<meta name="description" content="RecipeHouse, a collection of recipes for everyone" />
+	<meta name="keywords" content="recipe, house, recipehouse, cooking, food, ajax, air" />
+	<meta name="robots" content="all" />
+	
+	<title>Recipe House / Cooking just got easier</title>
+	
+	<script src="js/script.js" type="text/javascript"></script>
+	<script src="js/prototype.js" type="text/javascript"></script>
+	<script src="js/animator.js" type="text/javascript"></script>
+	<!-- <script src="js/mootools.release.83.js" type="text/javascript"></script> -->
+	
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body onload="onLoad('index')">
+	<div id="mainContainer">
+		
+		<div id="mainHeaderText" onclick="display('Home', 1);" ><h1>Recipe House</h1></div>
+		<div id="mainHeader">			
+			<div id="mainHeaderInput">
+				&nbsp;
+			</div>
+		</div>
+		
+		<div id="mainContent">
+			<div id="load_overlay"><img src="./images/loading.gif" alt="Loading" /></div>
+			
+			<div id="mainOpen">
+				<div id="mainImage">
+					<img width="930" height="185" alt="Recipe House Header" src="./images/header.jpg"/>
+				</div>
+				
+				<div id="mainDesc">
+					<div id="mainCol1">
+						<span>
+							<p><b>Recipe House: Aroma</b> - helping answer the age-old question of "What's for dinner." Whether you're sharing a recipe, or looking for a quick and easy dinner idea, this is where inspiration comes to life!</p>
+							<br />
+							<p>Store all your favorite recipes in one spot. <b>Recipe House: Aroma</b> has many search options, allowing you to quickly and easily find the perfect recipe for any occasion. Choose from a variety of search options, to include: recipe name, ingredient, or author. Once you've found the perfect recipe, <b>Recipe House: Aroma</b> conveniently allows you to print.</p>
+							<br />
+							<p>Use <b>Recipe House: Aroma</b> to store and share your favorite recipes. Get started by clicking the Install Now link to the right.</p>
+							<br />
+							<p>Bon Appetit!</p>
+							<br />
+							<p>Note: Requires Adobe AIR to run, get it <span class='link' onClick="window.open('http://labs.adobe.com/downloads/air.html')">here</span>.</p>
+						</span>
+					</div>
+					
+					<div id="mainCol2">
+						<div id="mainRecent">
+							<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+								codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" 
+								width="217" 
+								height="180" 
+								id="badge" 
+								align="middle">
+								<param name="allowScriptAccess" value="all">
+								<param name="movie" value="/recipehouse/swf/badge.swf">
+								<param name="quality" value="high">
+								<param name="bgcolor" value="#EBD77E">
+								<param name="FlashVars" value="appname=Aroma&amp;appurl=http://www.coursevector.com/download/Aroma.air&amp;airversion=1.0.0&amp;buttoncolor=EBD77E&amp;messagecolor=000000&amp;imageurl=images/aroma.jpg">
+								<embed 
+								src="/recipehouse/swf/badge.swf" 
+								quality="high" 
+								bgcolor="#EBD77E" 
+								name="badge" 
+								allowscriptaccess="all" 
+								type="application/x-shockwave-flash" 
+								pluginspage="http://www.macromedia.com/go/getflashplayer" 
+								flashvars="appname=Aroma&amp;appurl=http://www.coursevector.com/download/Aroma.air&amp;airversion=1.0.0&amp;buttoncolor=EBD77E&amp;messagecolor=000000&amp;imageurl=images/aroma.jpg" 
+								align="middle" 
+								height="180" 
+								width="217">
+							</object>
+						</div>
+					</div>
+				</div>
+				
+				<div id="mainFilters">
+					<div class="horizBar" ></div>
+					&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div id="recipeDetail"></div>
+		<div id="recipeList"></div>
+		<div id='addForm'></div>
+		
+		<div id="mainFooter">
+			<br />
+			<h1>Copyright © 2007 Course Vector All rights reserved.</h1>
+		</div>
+	</div>
+	
+	<div id="screen">
+		<div id="aboutContainer">
+			<div id="aboutTitle">About Recipe House</div>
+			<div id="aboutContent">Stuffs about recipe house.</div>
+			<div id="aboutControls"><span class="link" onclick="display('About', 0);" >Close Button</span></div>
+		</div>		
+	</div>
+	
+	<div id="overlay"></div>
+</body>
+</html>

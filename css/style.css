@@ -1,0 +1,796 @@
+@CHARSET "ISO-8859-1";
+
+/*
+Light Gold:   #F9F2CE
+Dark Gold:    #EBD77E
+Border Gold:  #ECBA27
+Border Green: #D3C06E
+Maroon:       #69101C
+*/
+
+
+/**********/	
+/* Global */
+/**********/
+* {
+	padding: 0;
+	margin: 0;
+	font-family: georgia,times;
+	}
+
+.fakelink, a {
+	color:#11529C;
+	cursor:pointer;
+	text-decoration:none;
+}
+	
+.link {
+	color: #69101C;
+	font-weight: bold;
+	}
+	
+.linkDisabled {
+	color: #A9A594;
+	font-weight: bold;
+	}
+	
+.link.hover{
+	color:#fff;
+	font-weight: bold;
+	}
+	
+body {
+	font: 80% "Lucida Sans", Tahoma, Verdana, sans-serif;
+	background-color: #E6E7EB;
+	}
+	
+#overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 95;
+	width: 100%;
+	height: 100%;
+	text-align: center;	
+	background-color: #000;
+	opacity: 0;
+	display: none;
+	}
+	
+#mainContainer {
+	position: absolute;
+	/*border: 1px solid #F28048;*/
+	margin: 0 2% auto;
+	width: 975px;
+	height: 100%;
+	text-align: left;
+	background-color: #F9F2CE;
+	/*background-image: url(../images/bg.gif);
+	background-repeat: repeat;*/
+
+	}
+
+#load_overlay {
+	position: absolute;
+	z-index: 90;
+	width: 100%;
+	height: 100%;
+	text-align: center;	
+	background-color: #000;
+	opacity: 0.5;
+	display: none;
+	color: #fff;
+	top: 0;
+	left: 0;
+	}
+	
+#mainContent {
+	width: 100%;
+	min-height: 400px;
+	/*background-color: #fff;*/
+	background-color: #F9F2CE;
+	/* Hack, but it works */
+	padding-top: 0.1px;
+	}
+	
+/* About */
+#screen {
+	text-align: center;
+	position: absolute;
+	/* Need to be reset to work in mozilla */
+	left: 0;
+	right: 0;
+	z-index: 100;
+	opacity: 0;
+	display: none;
+	}
+
+#aboutContainer {
+	padding: 10px;
+	width: 300px;
+	height: 300px;
+	background-color: #EBD77E;
+	text-align: left;
+	margin-top: 15%;
+	margin-left: auto;
+	margin-right: auto;	
+	}
+
+#aboutTitle {
+	color: #fff;
+	font-size: 2em;
+	font-weight: bold;
+	}
+	
+#aboutContent{
+	background-color: #fff;
+	height: 230px;
+	padding: 10px;
+	}
+	
+#aboutControls{
+	padding-top: 5px;
+	}
+
+/* Header */
+#mainHeader {
+	background-color: #EBD77E;
+	width: 100%;		
+	height: 40px;
+	margin-top: 100px;
+	/*position: relative;*/
+	}
+
+#mainHeaderText {
+	padding-top: 7px;
+	float: left;
+	}
+
+#mainHeaderText h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #D3C06E;
+	margin-left: 10px;
+	}
+
+#mainHeaderInput {
+	float:right;
+	/*background-color:#EBD77E;*/
+	padding-top: 6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	}
+
+#mainHeaderInput select {
+	border-style: none;
+	border-width: 0px;
+	height: 20px;
+	background-color: #fff;
+	font-size: 1em;
+	}
+	
+input {
+	width: 200px;
+	height: 20px;
+	border-style: solid;
+	border-width: 2px;
+	font-size: 1em;
+	border-color:#D3C06E;
+	background-color: #fff;
+	}
+	
+#mainHeaderInput a {
+	padding-left:15px;
+	padding-right:15px;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #fff;	
+	text-decoration: none;
+	height: 100%;
+	}
+	
+/* Footer */
+#mainFooter{
+	text-align: center;
+	background-color: #fff;
+	width: 100%;
+	height: 40px;
+	position: relative;
+	padding-top: 10px;
+	}
+
+#mainFooter centerFooter {
+	text-align: center;
+	}
+	
+#mainFooter h1 {
+	font-size: .7em;
+	}
+
+/********/	
+/* Main */
+/********/
+#mainImage{
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 7px;
+	opacity: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ECBA27;
+	overflow:hidden;
+	/*width: 935px;*/
+	}
+	
+#mainDesc{
+	padding-top: 15px;
+	padding-left: 15px;
+	/*float: left;*/
+	z-index: 15;
+	width: 100%;
+	color: #000000;
+	}
+	
+#mainCol1{
+	padding: 15px;
+	float:left;
+	width: 650px;
+	background-color: #ffffff;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #A9A594;
+}
+
+#mainCol1 span p b{
+	font-size: 110%;
+}
+
+#mainSuggestBg{
+	margin-top: 20px;	
+	width: 540px;
+	height: 410px;
+	margin-left: 10px;
+	padding-top: 10px;
+}
+
+#mainSuggestBg h1{
+	font-family:arial;
+	font-size:20px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	text-transform: uppercase;
+	color: #A9A594;	
+	padding-left: 15px;
+}
+
+.mainSuggestRcp{
+	margin-left: 10px;
+	margin-bottom: 5px;
+	padding:10px;
+	padding-top: 10px;	
+	padding-bottom: 15px;	
+	width: 500px;
+	height: 80px;
+	clear: both;
+	background-color:#FDEFB0;
+	
+}
+
+.rcpImage{
+	float:left;
+}
+
+.rcp{
+	padding-left: 20px;
+	float:left;
+	width: 365px;
+}
+
+.rcp h3{
+	font-family:georgia,times;
+	font-size:144%;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-transform: capitalize;
+}
+
+.rcp h3 a,
+.rcp h3 a:link,
+.rcp h3 a:visited{
+	font-family: georgia, times;
+	font-size: 19px;
+	color: #680E1A;
+}
+
+.rcp cite{
+	font-family:arial;
+	font-size:85%;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+}
+
+.rcp cite a{
+	color:#11529C;
+}
+
+.rcp ul {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin-top: 5px;
+}
+
+.rcpSumm{
+	background-color:#ffffff;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	overflow:hidden;
+	width:282px;
+}
+
+.rcpSumm li{
+	display:inline;
+	float:left;
+	margin:4px 0px;
+	padding-bottom:3px;
+	text-align:center;
+	width:94px;
+}
+
+.rcpSumm li strong{
+	color:#6A580F;
+	display:block;
+	font-size:85%;
+	font-weight:bold;
+}
+
+#mainCol2{
+	float:left;
+	width: 250px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#mainLogin {
+	padding-bottom: 10px;
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-bottom-color: #680E48;
+	width: 190px;
+}
+
+#mainLogin input{
+	width: 175px;
+}
+	
+
+#mainLogin h1{
+	font-family:georgia,times;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-transform: capitalize;
+	font-size: 19px;
+	color: #680E1A;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#userLogin {
+	background-color: #ffffff;
+	width: 100px;
+	margin-left: 35px;
+	text-align: center;
+	margin-top: 10px;
+	padding: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color:#D3C06E;
+	color: #680E1A;
+	font-weight: bold;
+}
+
+#mainRecent{
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-bottom: 15px;
+	width: 93%;
+	background-color: #EBD77E;
+}
+
+#mainRecent h1{
+	font-family:arial;
+	font-size:20px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	text-transform: uppercase;
+	color: #ffffff;	
+	padding-left: 5px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+#mainRecent ul{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin-top: 5px;
+	padding-bottom: 10px;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+#mainRecent li{
+	background:transparent url(../images/vid-ply.gif) no-repeat scroll 6px 6px;
+	display:block;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #EBD77E;
+	background-color: #ffffff;
+	padding:3px;
+	padding-left: 20px;
+	width:162px;
+}
+
+#mainRecent li a{
+	font-size: 10px;
+	font-weight: bold;
+	font-family: arial;
+	color: #676767;
+}
+
+#mainFilters{
+	padding: 15px;
+	padding-top: 15px;	
+	width: 940px;
+	line-height: 1.75;
+}
+
+#mainFilters h1{
+	font-family: georgia,times;
+	font-size-adjust: none;
+	font-style: oblique;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 30px;
+	padding-left: 25px;
+	color: #680E1A;
+
+}
+
+#mainFilters blockquote {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+#mainFilters li{
+	display:inline;
+}
+
+#mainFilters li h1{
+	font-family: georgia,times;
+	font-size-adjust: none;
+	font-style: oblique;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: #A9A594;
+	display:inline;
+}
+
+/***********/
+/* Add Recipe */
+/***********/
+#addForm{
+	padding-top: 10px;
+	padding-left: 30px;
+	display: none;
+	text-align: center;
+	padding-bottom: 30px;
+	}
+	
+#addContainer {
+	text-align: left;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+#addDirections {
+	padding: 10px;
+	font-size: 1em;
+	color: #A9A594;
+	height: 75px;
+	background-color: #F9F2CE;
+	}
+	
+#addDirTitle {
+	font-size: 3em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #A9A594;
+	}
+	
+#addStepNum {
+	float:left;
+	font-size: 2em;
+	font-weight: bold;
+	margin-right: 20px;
+	}
+	
+#addDirSubTitle {
+	font-size: 1em;
+	font-weight: bold;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #A9A594;
+	padding-top: 5px;
+	float:left;
+	width: 100%;
+	}
+	
+.addTitle {
+	font-size: 1em;
+	font-weight: bold;
+	color: #69101C;
+	font-family: georgia,times;
+	background-color: #EBD77E;
+	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin-top: 10px;
+	}
+	
+.addForm {
+	padding-left: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #F9F2CE;
+	}
+	
+.addForm select {
+	border-style: none;
+	border-width: 0px;	
+	background-color: #fff;
+	font-size: 1em;
+	}
+	
+.addForm textarea {
+	border-style: solid;
+	border-width: 2px;
+	border-color:#D3C06E;
+	background-color: #fff;
+	}
+	
+.addForm input {
+	width: 400px;
+	border-style: solid;
+	border-width: 2px;
+	font-size: 1em;
+	border-color:#D3C06E;
+	background-color: #fff;
+	}
+	
+#addPart1 {
+	display: block;
+	clear: both;
+	}
+
+#addPart2 {
+	display: none;
+	}
+	
+#addPart3 {
+	display: none;
+	}
+	
+.addFormAmount input {
+	width: 70px;
+	border-style: solid;
+	border-width: 2px;
+	margin-top: 5px;
+	font-size: 1em;
+	border-color:#D3C06E;
+	background-color: #fff;
+	}
+	
+.addFormPrep input {
+	width: 100px;
+	border-style: solid;
+	border-width: 2px;
+	margin-top: 5px;
+	font-size: 1em;
+	border-color:#D3C06E;
+	background-color: #fff;
+	}
+	
+.addFormItem input {
+	width: 200px;
+	border-style: solid;
+	border-width: 2px;
+	margin-top: 5px;
+	font-size: 1em;
+	border-color:#D3C06E;
+	background-color: #fff;
+	}
+	
+#addMessage {
+	/**/
+	}
+	
+#addControls {
+	margin-top: 10px;
+	padding-top: 2px;
+	height: 20px;
+	background-color: #F9F2CE;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #ECBA27;
+	text-align: center;
+	}
+	
+/***************/	
+/* View Recipe */
+/***************/
+/*
+Light Gold:   #F9F2CE
+Dark Gold:    #EBD77E
+Border Gold:  #ECBA27
+Border Green: #D3C06E
+Maroon:       #69101C
+*/
+#recipeDetail {
+	background-color: #EBD77E;
+	width: 930px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	padding: 10px;
+	display: none;
+	}
+
+#recipeDetailHolder {	
+	background-color: #F9F2CE;	
+	}
+	
+#recipeDetailHolder2 {	
+	/**/
+	}
+	
+#recipeDetailTitle {
+	color: #fff;
+	font-weight: bold;
+	font-size: 2.5em;
+	}
+	
+#recipeDetailServings {
+	color: #69101C;
+	font-weight: bold;
+	font-size: 1em;
+	}
+	
+#recipeDetailIngredients {
+	padding: 10px;
+	padding-bottom: 5px;
+	padding-top: 10px;
+	float: left;
+	}
+	
+#recipeDetailImage {
+	background-color: #D3C06E;
+	width: 150px;
+	height: 150px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	float: right;
+	}
+
+#recipeDetailInstructions {
+	padding: 10px;
+	padding-bottom: 5px;
+	padding-top: 0px;
+	clear: both;
+	}
+	
+#recipeDetailNotes {
+	padding: 10px;
+	padding-bottom: 5px;
+	padding-top: 0px;
+	}
+	
+#recipeDetailControls {
+	padding-left: 20px;
+	padding-top: 10px;
+	}
+	
+.recipeTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	}
+	
+.horizBar {
+	border-bottom: 1px solid #EBD77E;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	clear: both;
+	}
+	
+#recipeList {
+	position: relative;
+	z-index: 60;
+	height: 400px;
+	width: 975px;
+	display : none;
+	
+	/*background-color: #FCF0E9;
+	opacity: 0.8;*/
+	}
+
+.recipeStub {
+	width: 290px;
+	height: 75px;
+	float: left;
+	margin-left: 17px;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+	padding: 5px;
+	background-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ECBA27;
+	/*display: none;*/
+	opacity: 0;
+	}
+
+.recipeStubImage {
+	float: left;
+	}
+	
+.recipeStubInner {
+	float: left;
+	width: 180px;
+	margin-left: 10px;
+	}
+	
+.recipeStubInner h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+	color: #69101C;
+	}
+	
+.recipeStubInner h2 {
+	font: 80% "Arial Sans", Tahoma, Verdana, sans-serif;
+	margin-top: 45px;
+	font-size: .75em;
+	font-weight: normal;
+	text-align: right;
+	}
+	
+#recipeControls {
+	position: absolute;
+	z-index: 61;
+	background-color: #EBD77E;
+	top: 378px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #ECBA27;
+	padding-top: 2px;
+	height: 20px;
+	width: 975px;
+	text-align: center;
+	}

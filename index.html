@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" version="-//W3C//DTD XHTML 1.1//EN" xml:lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="Gabriel Mariani, Course Vector" />
+	<meta name="copyright" content="copyright 2006 www.coursevector.com" />
+	<meta name="description" content="RecipeHouse, a collection of recipes for everyone" />
+	<meta name="keywords" content="recipe, house, recipehouse, cooking, food, ajax" />
+	<meta name="robots" content="all" />
+	
+	<title>Recipe House / Cooking just got easier</title>
+	
+	<script src="js/script.js" type="text/javascript"></script>
+	<script src="js/prototype.js" type="text/javascript"></script>
+	<script src="js/animator.js" type="text/javascript"></script>
+	<!-- <script src="js/mootools.release.83.js" type="text/javascript"></script> -->
+	
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body onload="onLoad('index')">
+	<div id="mainContainer">
+		
+		<div id="mainHeaderText" onclick="display('Home', 1);" ><h1>Recipe House</h1></div>
+		<div id="mainHeader">			
+			<div id="mainHeaderInput">
+				<select name="searchBy">
+					<option value="n" selected="selected">Recipe Name</option>
+					<option value="i">Ingredient</option>
+					<option value="m">Cooking Method</option>
+					<option value="c">Category</option>
+				</select>
+				<input type="text" id="recipeSearch" value="" /><a href="javascript:searchRecipe();" >Search</a>
+			</div>
+		</div>
+
+		
+			
+		<div id="mainContent">
+			<div id="load_overlay"><img src="./images/loading.gif" alt="Loading" /></div>
+			
+			<div id="mainOpen">
+				<div id="mainImage">
+					<img width="930" height="185" alt="Recipe House Header" src="./images/header.jpg"/>
+				</div>
+				
+				<div id="mainDesc">
+					<div id="mainCol1">
+						<span>
+							<p><b>Recipe House</b> - helping answer the age-old question of "What's for dinner." Whether you're sharing a recipe, or looking for a quick and easy dinner idea, this is where inspiration comes to life!</p>
+							<br />
+							<p>Store all your favorite recipes in one spot. <b>Recipe House</b> has many search options, allowing you to quickly and easily find the perfect recipe for any occasion. Choose from a variety of search options, to include: recipe name, ingredient, cooking method, or category. Once you've found the perfect recipe, <b>Recipe House</b> conveniently allows you to print.</p>
+							<br />
+							<p>Use <b>Recipe House</b> to store and share your favorite recipes. Get started by browsing through the recipes already here, or add a few of your own by clicking on the Add Recipe link on the bottom of the page.</p>
+							<br />
+							<p>Bon Appetit!</p>
+						</span>
+						<div id="mainSuggestBg">
+						
+							<h1>breakfast</h1>
+							<div class="mainSuggestRcp">								
+								<div class="rcpImage">
+									<a href="#">
+										<img width="110" height="80" alt="Recipe Name" src="./images/recipe/no_image.jpg"/>
+									</a>
+								</div>
+								<div class="rcp">
+									<h3>
+										<a href="#"><span id="bfTitle">Rainbow Salad</span></a>
+									</h3>
+									<cite>
+										Provided by <a href="#"><span id="bfProv">Jennifer</span></a>
+									</cite>
+									<ul class="rcpSumm">
+										<li class="dtvt">
+											<span>Prep Time:</span>
+											<strong><span id="bfPrep">-</span></strong>
+										</li>
+										<li class="dtvt">
+											<span>Cook Time:</span>
+											<strong><span id="bfTime">-</span></strong>
+										</li>
+										<li class="dtvt">
+											<span>Serves:</span>
+											<strong><span id="bfServe">12</span></strong>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<h1>lunch</h1>
+							<div class="mainSuggestRcp">								
+								<div class="rcpImage">
+									<a href="#">
+										<img width="110" height="80" alt="Recipe Name" src="./images/recipe/no_image.jpg"/>
+									</a>
+								</div>
+								<div class="rcp">
+									<h3>
+										<a href="#"><span id="bfTitle">Rainbow Salad</span></a>
+									</h3>
+									<cite>
+										Provided by <a href="#"><span id="bfProv">Jennifer</span></a>
+									</cite>
+									<ul class="rcpSumm">
+										<li class="dtvt">
+											<span>Prep Time:</span>
+											<strong><span id="bfPrep">-</span></strong>
+										</li>
+										<li class="dtvt">
+											<span>Cook Time:</span>
+											<strong><span id="bfTime">-</span></strong>
+										</li>
+										<li class="dtvt">
+											<span>Serves:</span>
+											<strong><span id="bfServe">12</span></strong>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<h1>dinner</h1>
+							<div class="mainSuggestRcp">								
+								<div class="rcpImage">
+									<a href="#">
+										<img width="110" height="80" alt="Recipe Name" src="./images/recipe/no_image.jpg"/>
+									</a>
+								</div>
+								<div class="rcp">
+									<h3>
+										<a href="#"><span id="bfTitle">Rainbow Salad</span></a>
+									</h3>
+									<cite>
+										Provided by <a href="#"><span id="bfProv">Jennifer</span></a>
+									</cite>
+									<ul class="rcpSumm">
+										<li class="dtvt">
+											<span>Prep Time:</span>
+											<strong><span id="bfPrep">-</span></strong>
+										</li>
+										<li class="dtvt">
+											<span>Cook Time:</span>
+											<strong><span id="bfTime">-</span></strong>
+										</li>
+										<li class="dtvt">
+											<span>Serves:</span>
+											<strong><span id="bfServe">12</span></strong>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+					<div id="mainCol2">
+						<div id="mainLogin">
+							<h1>Name:</h1>
+							<input type="text" id="userName" value="" >
+							<h1>Password:</h1>
+							<input type="password" id="userpass" value="" >
+							<div id="userLogin" >Sign In</div>
+						</div>
+						<div id="mainRecent">
+							<h1>Recently Added</h1>
+							<ul>
+								<li><a href="3">Recipe 1</a></li>
+								<li><a href="3">Recipe 2</a></li>
+								<li><a href="3">Recipe 3</a></li>
+								<li><a href="3">Recipe 4</a></li>
+								<li><a href="3">Recipe 5</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div id="mainFilters">
+					<div class="horizBar" ></div>
+					<h1>filters</h1>
+					<blockquote>
+						<ul>
+							<li><h1>occasions & holidays</h1></li>
+							<li>Birthday</li>
+							<li>Anniversary</li>
+							<li>Thanksgiving</li>
+							<li>Hanukkah</li>
+							<li>Christmas</li>
+							<li>New Year's</li>
+							<li><h1>healthy</h1></li>
+							<li>Dairy Free</li>
+							<li>Gluten Free</li>
+							<li>Low Calorie</li>
+							<li>Low Carb</li>
+							<li>Low Fat</li>
+							<li>Low Sugar</li>
+							<li>Vegan</li>
+							<li>Egg Free</li>
+							<li>High Fiber</li>
+							<li><h1>dish</h1></li>
+							<li>Cake</li>
+							<li>Candy</li>
+							<li>Casserole</li>
+							<li>Cookies</li>
+							<li>Dressing</li>
+							<li>Pie/Tart</li>
+							<li>Pizza</li>
+							<li>Salad</li>
+							<li>Sandwich</li>
+							<li>Sauce/Marinade</li>
+							<li>Soup/Stew</li>
+							<li>Sidedishes</li>
+							<li><h1>by meal</h1></li>
+							<li>Breakfast</li>
+							<li>Brunch</li>
+							<li>Dessert</li>
+							<li>Dinner</li>
+							<li>Lunch</li>
+							<li>Snacks</li>
+							<li>Main Dish</li>
+							<li>Side Dish</li>
+							<li>Beverages</li>
+							<li>Appetizer</li>
+							<li>Hors d'Oeuvres</li>
+							<li><h1>cooking method</h1></li>
+							<li>Grilling</li>
+							<li>Slow Cooking</li>
+							<li>Baking</li>
+							<li>Frying</li>
+							<li>Roasting</li>
+							<li>Steaming</li>
+							<li>Boiling</li>
+							<li>Stir Frying</li>
+							<li>Sauteing</li>
+							<li>Poaching</li>
+							<li>Braising</li>
+							<li>Raw</li>
+							<li>BBQ</li>
+							<li>Baking</li>
+							<li>Broiling</li>
+							<li><h1>providor</h1></li>
+							jennifer
+							<li><h1>cuisine</h1></li>
+							<li>american</li>
+							<li>chinese</li>
+							<li>german</li>
+							<li>greek</li>
+							<li>eastern european</li>
+							<li>french</li>
+							<li>indian</li>
+							<li>italian</li>
+							<li>japanese</li>
+							<li>mexican</li>
+							<li>spanish</li>
+							<li>thai</li>
+							<li>kosher</li>
+							<li>cajun/creole</li>
+							<li>southern/soul</li>
+							<li>vietnamese</li>
+							<li><h1>ingredients</h1></li>
+							<li>beef</li>
+							<li>pork</li>
+							<li>lamb</li>
+							<li>fish</li>
+							<li>shellfish</li>
+							<li>chicken</li>
+							<li>turkey</li>
+							<li>duck</li>
+							<li>cheese & dairy</li>
+							<li>fruit</li>
+							<li>vegetables</li>
+							<li>grains</li>
+							<li>beans & legumes</li>
+							<li>eggs</li>
+							<li>bread</li>
+							<li>pasta</li>
+							<li>chocolate</li>
+							<li>wild game</li>
+							<li>greens</li>
+							<li>other</li>
+						</ul>
+					</blockquote>
+				</div>
+			</div>
+			
+			<div id='addForm'>
+				<div id="addContainer" >
+					<div id="addDirections">
+						<div id="addDirTitle">Add Recipe</div>
+						<div id="addDirSubTitle">
+							<span id="addStepNum">1</span><div id="addStepTitle">Enter Recipe Info</div>
+						</div>
+					</div>
+					
+					<div id="addPart1" >					
+						<div class="addFormSection" >
+							<div class="addTitle" >Recipe Name</div>
+							<div class="addForm" ><input type="text" id="recipeName" value=""  /></div>
+							<div class="infoIcon" ></div>
+						</div>
+						<div class="addFormSection" >
+							<div class="addTitle" >Category</div>
+							<div class="addForm" ><input type="text" id="recipeCat" value=""  /></div>
+							<div class="infoIcon" ></div>
+						</div>
+						<div class="addFormSection" >
+							<div class="addTitle" >Method</div>
+							<div class="addForm" ><input type="text" id="recipeMethod" value=""  /></div>
+							<div class="infoIcon" ></div>
+						</div>
+						<div class="addFormSection" >
+							<div class="addTitle" >Time</div>
+							<div class="addForm" >
+								<select id="recipeTime_num" style="width: 45px">
+									<option value="1" selected="selected">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="40">40</option>
+								</select>
+								<select id="recipeTime_fract" style="width: 40px">
+									<option value="none" selected="selected"></option>
+									<option value="1/4">&frac14;</option>
+									<option value="1/2">&frac12;</option>
+									<option value="3/4">&frac34;</option>
+								</select>
+								<select id="recipeTime_op" style="width: 80px">
+									<option value="hour" selected="selected">hours</option>
+									<option value="min">minutes</option>
+								</select>
+							</div>
+							<div class="infoIcon" ></div>
+						</div>
+						<div class="addFormSection" >
+							<div class="addTitle" >Servings</div>
+							<div class="addForm" ><input type="text" id="recipeServe" value=""  /></div>
+							<div class="infoIcon" ></div>
+						</div>
+					</div>				
+					
+					<div id="addPart2" >
+						<div class="addFormSection" >
+							<div class="addForm" ><textarea id="recipeInst" cols=60 rows=6></textarea></div>
+							<div class="infoIcon" ></div>
+						</div>
+					</div>
+					
+					<div id="addPart3" >
+						<div class="addFormSection" >
+							<div class="addTitle" >Ingredient 1</div>
+							<div class="addForm" >
+								Amount: <span class="addFormAmount"><input type="text" id="ing1_amount" value="" size="10"></input></span>
+								Prepared: <span class="addFormPrep"><input type="text" id="ing1_prep" value="" size="10"></input></span>
+								Item: <span class="addFormItem"><input type="text" id="ing1_item" value="" size="70"></input></span>
+							</div>
+							<div class="infoIcon" ></div>
+						</div>
+						<div class="addFormSection" >
+							<div class="addTitle" >Ingredient 2</div>
+							<div class="addForm" >
+								Amount: <span class="addFormAmount"><input type="text" id="ing2_amount" value="" size="10"></input></span>
+								Prepared: <span class="addFormPrep"><input type="text" id="ing2_prep" value="" size="10"></input></span>
+								Item: <span class="addFormItem"><input type="text" id="ing2_item" value="" size="70"></input></span>
+							</div>
+							<div class="infoIcon" ></div>
+						</div>
+						<div class="addFormSection" >
+							<div class="addTitle" >Ingredient 3</div>
+							<div class="addForm" >
+								Amount: <span class="addFormAmount"><input type="text" id="ing3_amount" value="" size="10"></input></span>
+								Prepared: <span class="addFormPrep"><input type="text" id="ing3_prep" value="" size="10"></input></span>
+								Item: <span class="addFormItem"><input type="text" id="ing3_item" value="" size="70"></input></span>
+							</div>
+							<div class="infoIcon" ></div>
+						</div>
+						<div class="addFormSection" >
+							<div class="addTitle" >Ingredient 4</div>
+							<div class="addForm" >
+								Amount: <span class="addFormAmount"><input type="text" id="ing4_amount" value="" size="10"></input></span>
+								Prepared: <span class="addFormPrep"><input type="text" id="ing4_prep" value="" size="10"></input></span>
+								Item: <span class="addFormItem"><input type="text" id="ing4_item" value="" size="70"></input></span>
+							</div>
+							<div class="infoIcon" ></div>
+						</div>
+					</div>
+					
+					<div id="addMessage" ></div>
+					
+					<div id="addControls" >
+						<span id="addBack" class='linkDisabled' onclick="addBackStep();" >Back</span> | 
+						<span id="addNext" class='link' onclick="addNextStep();" >Next</span> | 
+						<span id="addSubmit" class='linkDisabled' onclick="saveRecipe();" >Save Recipe</span>
+					</div>
+				</div>
+			</div>
+
+			<div id="recipeDetail">				
+				<span id="recipeDetailTitle" >Title Here</span>
+				<span id="recipeDetailServings" >Num of Servings</span>
+				
+				<div id="recipeDetailHolder">					
+					<div id="recipeDetailHolder2" >
+						<div id="recipeDetailIngredients">List of Ingredients Here</div>
+						<div id="recipeDetailImage">Recipe Picture</div>
+					</div>
+					<div class="horizBar" ></div>
+					<div id="recipeDetailInstructions">Instructions Here</div>
+					<div class="horizBar" ></div>
+					<div id="recipeDetailNotes"><span class='recipeTitle' >Notes</span><br />Some Notes</div>
+				</div>
+				
+				<div id="recipeDetailControls">
+					<span class='link' onclick="navigateRecipe(-1);" >Previous</span> | 
+					<span class='link' onclick="navigateRecipe(1);" >Next</span> | 
+					<span class='link' onclick="closeRecipe();" >Close</span>
+				</div>
+			</div>
+			
+			<div id="recipeList">					
+				<div class="recipeStub" id="recipeStubA_1">
+					<div class="recipeStubImage"><img src="./images/no_image.jpg" alt="Recipe Name" height="70" width="70" /></div>
+					<div id="recipeStubA_1_Text" class="recipeStubInner"></div>
+				</div>
+				
+				<div class="recipeStub" id="recipeStubA_2">
+					<div class="recipeStubImage"><img src="./images/no_image.jpg" alt="Recipe Name" height="70" width="70" /></div>
+					<div id="recipeStubA_2_Text" class="recipeStubInner"></div>
+				</div>
+				
+				<div class="recipeStub" id="recipeStubA_3">
+					<div class="recipeStubImage"><img src="./images/no_image.jpg" alt="Recipe Name" height="70" width="70" /></div>
+					<div id="recipeStubA_3_Text" class="recipeStubInner"></div>
+				</div>
+				
+				<div class="recipeStub" id="recipeStubA_4">
+					<div class="recipeStubImage"><img src="./images/no_image.jpg" alt="Recipe Name" height="70" width="70" /></div>
+					<div id="recipeStubA_4_Text" class="recipeStubInner"></div>
+				</div>
+				
+				<div class="recipeStub" id="recipeStubA_5">
+					<div class="recipeStubImage"><img src="./images/no_image.jpg" alt="Recipe Name" height="70" width="70" /></div>
+					<div id="recipeStubA_5_Text" class="recipeStubInner"></div>
+				</div>
+				
+				<div class="recipeStub" id="recipeStubA_6">
+					<div class="recipeStubImage"><img src="./images/no_image.jpg" alt="Recipe Name" height="70" width="70" /></div>
+					<div id="recipeStubA_6_Text" class="recipeStubInner"></div>
+				</div>
+				
+				<div class="recipeStub" id="recipeStubA_7">
+					<div class="recipeStubImage"><img src="./images/no_image.jpg" alt="Recipe Name" height="70" width="70" /></div>
+					<div id="recipeStubA_7_Text" class="recipeStubInner"></div>
+				</div>
+				
+				<div class="recipeStub" id="recipeStubA_8">
+					<div class="recipeStubImage"><img src="./images/no_image.jpg" alt="Recipe Name" height="70" width="70" /></div>
+					<div id="recipeStubA_8_Text" class="recipeStubInner"></div>
+				</div>
+				
+				<div class="recipeStub" id="recipeStubA_9">
+					<div class="recipeStubImage"><img src="./images/no_image.jpg" alt="Recipe Name" height="70" width="70" /></div>
+					<div id="recipeStubA_9_Text" class="recipeStubInner"></div>
+				</div>	
+				
+				<div id="recipeControls">				
+					<span class='link' onclick="recipeSet(-1)" >Previous</span> |
+					<span class='link' onclick="recipeSet(1)" >Next</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id="mainFooter">
+			<span class='link' onclick="display('Add', 1);" >Add Recipe</span> |
+			<span>Remove Recipe</span> |
+			<span class='link' onclick="display('View', 1);" >View All</span><br />
+			<h1>Copyright © 2006 Course Vector All rights reserved. | <span class='link' onclick="display('About', 1);" >About Recipe House</span></h1>
+		</div>
+	</div>
+	
+	<div id="screen">
+		<div id="aboutContainer">
+			<div id="aboutTitle">About Recipe House</div>
+			<div id="aboutContent">Stuffs about recipe house.</div>
+			<div id="aboutControls"><span class="link" onclick="display('About', 0);" >Close Button</span></div>
+		</div>		
+	</div>
+	
+	<div id="overlay"></div>
+</body>
+</html>
